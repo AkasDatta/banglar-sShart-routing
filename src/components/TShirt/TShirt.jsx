@@ -9,7 +9,7 @@ const TShirt = ({tshirt, handleAddToCart}) => {
             <img src={picture} alt="" />
             <h4>Name: {name}</h4>
             <p>Price: ${price}</p>
-            <button className='t-button' onClick={handleAddToCart}>Buy now</button>
+            <button className='t-button' onClick={() => handleAddToCart(tshirt)}>Buy now</button>
         </div>
     );
 };

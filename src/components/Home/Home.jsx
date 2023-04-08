@@ -9,7 +9,8 @@ const Home = () => {
     const [cart, setCart] = useState([]);
 
 const handleAddToCart = tshirt =>{
-    console.log(tshirt);
+    const newCart = [...cart, tshirt];
+    setCart(newCart);
 }
 
     return (
@@ -24,7 +25,7 @@ const handleAddToCart = tshirt =>{
             }
         </div>
         <div className="cart-container">
-            <Cart></Cart>
+            <Cart cart={cart}></Cart>
         </div>
       </div>
     );
