@@ -8,10 +8,21 @@ const Home = () => {
     const tshirts = useLoaderData();
     const [cart, setCart] = useState([]);
 
-const handleAddToCart = tshirt =>{
-    const newCart = [...cart, tshirt];
-    setCart(newCart);
+    const handleAddToCart = tshirt =>{
+        const exists = cart.find(ts => ts._id === tshirt._id);
+        if(exists){
+
+        }
+        else{
+            const newCart = [...cart, tshirt];
+            setCart(newCart);
+        }
 }
+
+    const handleRemoveFromCart = id =>{
+        const remaining = cart.filter(ts => ts._id !== id);
+        setCart(remaining);
+    }
 
     return (
       <div className="home-container">
@@ -25,7 +36,10 @@ const handleAddToCart = tshirt =>{
             }
         </div>
         <div className="cart-container">
-            <Cart cart={cart}></Cart>
+            <Cart 
+                cart={cart}
+                handleRemoveFromCart={handleRemoveFromCart}
+            ></Cart>
         </div>
       </div>
     );
