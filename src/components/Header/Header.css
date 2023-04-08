@@ -2,3 +2,7 @@ nav a{
     margin-right: 15px;
     font-size: 30px;
 }
+nav button{
+    background-color:brown;
+    font-size: 20px;
+}

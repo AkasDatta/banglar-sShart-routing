@@ -5,10 +5,10 @@ import './Header.css';
 const Header = () => {
     return (
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/review">Order Review</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/"><button>Home</button></Link>
+            <Link to="/review"><button>Order Review</button></Link>
+            <Link to="/about"><button>About</button></Link>
+            <Link to="/contact"><button>Contact</button></Link>
         </nav>
     );
 };

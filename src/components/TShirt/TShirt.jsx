@@ -7,6 +7,9 @@ const TShirt = ({tshirt}) => {
     return (
         <div className='tshirt'>
             <img src={picture} alt="" />
+            <h4>Name: {name}</h4>
+            <p>Price: ${price}</p>
+            <button className='t-button'>Buy now</button>
         </div>
     );
 };

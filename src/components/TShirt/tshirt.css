@@ -7,3 +7,7 @@
     height: 250px;
     border-radius: 10px;
 }
+.t-button{
+    color: rgb(193, 185, 221);
+    background-color: rgb(27, 39, 67);
+}
