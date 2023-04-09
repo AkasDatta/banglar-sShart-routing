@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home';
 import Main from './components/Layout/Main';
 import OrderReview from './components/OrderReview/orderReview';
+import Grandpa from './components/Grandpa/Grandpa';
 
 
 const router = createBrowserRouter([
@@ -22,8 +23,12 @@ const router = createBrowserRouter([
         loader: () => fetch('tsharts.json')
       },
        {
-        path: 'review',
+        path: '/review',
         element: <OrderReview></OrderReview>
+      },
+      {
+        path: '/grandpa',
+        element:<Grandpa></Grandpa>
       }
     ]
   },
